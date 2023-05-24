@@ -1,14 +1,15 @@
+import bcrypt
 import logging
 import uuid
-from datetime import datetime, timedelta
 
-import bcrypt
 from aries_cloudagent.core.error import BaseError
 from aries_cloudagent.core.profile import Profile
 from aries_cloudagent.messaging.models.base import BaseModelError
 from aries_cloudagent.multitenant.base import BaseMultitenantManager
 from aries_cloudagent.storage.error import StorageError, StorageNotFoundError
 from aries_cloudagent.wallet.models.wallet_record import WalletRecord
+from datetime import datetime, timedelta
+from typing import List
 
 from .config import TractionInnkeeperConfig
 from .models import TenantRecord, ReservationRecord
